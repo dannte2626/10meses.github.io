@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Love You by AlexDev</title>
+  <link rel="icon" type="image/x-icon" href="Love_files/icon.png">
+  <meta name="language" content="es-ES">
+  <meta name="title" content="title">
+  <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
+
+  <!-- Scripts necesarios para animación -->
+  <script src="./Love_files/jquery.min.js"></script>
+  <script src="./Love_files/jscex.min.js"></script>
+  <script src="./Love_files/jscex-parser.js"></script>
+  <script src="./Love_files/jscex-jit.js"></script>
+  <script src="./Love_files/jscex-builderbase.min.js"></script>
+  <script src="./Love_files/jscex-async.min.js"></script>
+  <script src="./Love_files/jscex-async-powerpack.min.js"></script>
+  <script src="./Love_files/functions.js" charset="utf-8"></script>
+  <script src="./Love_files/love.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div id="main">
+    <div id="error">
+      Tu navegador que estás usando no es compatible con el contenido que se va a mostrar. 
+      Por favor, usa Google (<a href="https://www.google.com/chrome/">Chrome</a>) 
+      o Firefox (<a href="https://www.mozilla.org/firefox/">Firefox</a>)~
+    </div>
+
+    <div id="wrap">
+      <div id="text">
+        <div id="code">
+          <span class="say">Para el amor de mi vida y mi esposa bella:</span><br><br>
+          <span class="say">primero que todo felices 10 meses amor , el tiempo se pasa rapido </span><br>
+            <span class="say" ></span>Si pudiera elegir un lugar seguro, sería a tu lado.</span><br>
+          <span class="say">te amo mas que a todo y todos.</span><br>
+          <span class="say">aunque no nos veamos te hago esto mientras madrugo para cuando te levantes lo veas.</span><br>
+          <span class="say">te amo te amo te amo te amo amo te amo te amo te amo te amooooooooooooooo tu cara tu mente tu alma tu cuerpo tus ojos tus pies tus labios tu felicidad,tristeza,molestia,tu honradez , valentia tus piernas muslos , tu poto, tus mangitos, tus brazos, tus manos,  tu pancitaa, tu todo de tu cuerpo , alma y personalidad</span><br>
+          <span class="say">y quiero que entiendas que estoy convencido que tus labios estan destinados a besar los mios.</span><br>
+          <span class="say">y que tu cuerpo encuentra refugio en el calor del mio, tus manos rozaran con las mias</span><br>
+          <span class="say">hasta que solo queden cenizas, porque sé que tus manos nunca encajaran tan bien como en las mias</span><br>
+          <span class="say">te pido que nunca me dejes y no destruyas este rompecambezas que unicamente tu y yo formamos</span><br> 
+            <span class="say">no me dejes sin tu pieza.</span><br>
+          <span class="say"><span class="space"></span> — te requeteamo muchote!</span>
+        </div>
+      </div>
+
+      <div id="clock-box">
+        <a href="https://alexxdev.vercel.app/" target="_blank">Mi amor</a>
+        <a href="https://alexxdev.vercel.app/" target="_blank">por ti</a> comenzó hace...
+        <div id="clock"></div>
+      </div>
+
+      <canvas id="canvas" width="1100" height="680"></canvas>
+    </div>
+  </div>
+
+  <!-- Audio de fondo -->
+  <audio id="media" src="Love_files/Lee HiONLY.mp3.mp3" autoplay loop></audio>
+
+  <!-- Código JS para intentar reproducir automáticamente -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const audio = document.getElementById("media");
+      const playPromise = audio.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Si el navegador bloquea el autoplay, espera clic
+          const iniciarAudio = () => {
+            audio.play();
+            document.removeEventListener("click", iniciarAudio);
+          };
+          document.addEventListener("click", iniciarAudio);
+        });
+      }
+    });
+  </script>
+
+  <!-- Script personalizado (si lo tienes) -->
+  <script src="script.js"></script>
+</body>
+</html>
